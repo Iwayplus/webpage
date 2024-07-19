@@ -1,19 +1,16 @@
-// routes/contact.js
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/Contact');
 
-// POST route to handle form submissions
-router.post('/', async (req, res) => {
-  try {
+router.post('/api/contact', async (req, res) => {
     const { name, phone, email, company, message } = req.body;
-    const contact = new Contact({ name, phone, email, company, message });
-    await contact.save();
-    res.status(201).json({ message: 'Form submitted successfully!' });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    try {
+        const newContact = new Contact({ name, phone, email, company, message });
+        await newContact.save();
+        res.status(200).json({ message: 'Form submitted successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error submitting form', error });
+    }
 });
 
 module.exports = router;
