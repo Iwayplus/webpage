@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "Frontend-install": "cd Frontend && npm install",
-    "Frontend-build":"cd Frontend && npm run build",
-    "Frontend":"cd Frontend && npm start",
-    "dev" :"nodemon server.js",
+    "Frontend-build": "cd Frontend && npm run build",
+    "Frontend": "cd Frontend && npm start",
+    "dev": "nodemon server.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongodb": "^6.7.0",
-    "mongoose": "^8.4.1"
+    "mongoose": "^8.4.1",
+    "path": "^0.12.7",
+    "url": "^0.11.3"
   }
 }
