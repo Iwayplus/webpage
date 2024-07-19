@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const contactRoutes = require('./routes/contact');
-
 const quoteRoutes = require('./routes/quote');
 
 const app = express();
@@ -25,7 +24,6 @@ mongoose.connect(mongoURI, {
 
 // Routes
 app.use(contactRoutes);
-
 app.use(quoteRoutes);
 
 // Start the server
