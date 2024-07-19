@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-image: url('../assets/images/back.png'); /* Replace with the path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.upper-container {
+  text-align: center;
+  margin-bottom: 1px;
+  position: relative; /* Ensure the container can position the SVG properly */
+  overflow: hidden; /* Hide overflow to prevent SVG overflow issues */
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.heading {
+  color: var(--Text_Blue, #213757);
+  font-family: "Plus Jakarta Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative; /* Ensure the text stays above the SVG */
+  z-index: 1; /* Ensure the text stays above the SVG */
+}
+
+.svg-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.lower-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries for tablet layout */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .svg-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+/* Media queries for mobile layout */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .svg-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .upper-container, .lower-container {
+    padding: 20px 10px;
+  }
+}
