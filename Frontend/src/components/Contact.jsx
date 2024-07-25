@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
+
 import axios from 'axios';
 import contact from "../assets/images/032.png";
 import confirm from "../assets/images/Confirm.gif";
+
+const baseUrl= process.env.NODE_ENV ==="development"? process.env.REACT_APP_LOCAL_URL : process.env.REACT_APP_REMOTE_URL
+
+console.log(baseUrl);
+// console.log(process.env.REACT_APP_LOCAL_URL);
+
+const apiClient = axios.create({
+    baseURL: baseUrl 
+});
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -264,9 +274,9 @@ const Contact = () => {
             setIsSubmitting(false);
             return;
         }
-
+   
         try {
-            const response = await axios.post('http://localhost:5000/api/contact', formData);
+            const response = await apiClient.post('/webapi/contact', formData);
             // alert(response.data.message);
             setFormData({
                 name: '',

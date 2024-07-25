@@ -21,6 +21,11 @@ import Usecase from './components/Usecase';
 import Testimonial from './components/Testimonial';
 import Privacy from './components/Privacy';
 import Client from './components/Client';
+import Bot from './components/Bot';
+
+
+
+
 function App() {
   const productsRef = useRef(null);
   const contactRef = useRef(null);
@@ -80,6 +85,8 @@ function App() {
           <Route path="/quote" element={<Quote />} /> 
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/contact" element={<Bot />} />
+
         </Routes>
       </Box>
     </Router>

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Quote = require('../models/quote');
 
-router.post('/api/quote', async (req, res) => {
+router.post('/webapi/quote', async (req, res) => {
     const {
         name, phone, email, organization, coreFunctionality, otherCoreFunctionality,
         timeline, otherTimeline, service, area, source, otherSource, additionalDetails

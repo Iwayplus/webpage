@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const baseUrl= process.env.NODE_ENV ==="development"? 'http://localhost:5000' : 'https://dev.iwayplus.in'
+
+console.log(process.env.NODE_ENV);
+const apiClient = axios.create({
+  baseURL: baseUrl 
+});
+
 const styles = {
   container: {
     display: 'flex',
@@ -195,7 +202,7 @@ const Quote = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/quote', {
+      const response = await apiClient.post('/webapi/quote', {
         ...formState,
         coreFunctionality: formState.coreFunctionality === 'Others' ? otherAnswers.coreFunctionality : formState.coreFunctionality,
         timeline: formState.timeline === 'Others' ? otherAnswers.timeline : formState.timeline,
