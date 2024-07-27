@@ -24,8 +24,6 @@ import Client from './components/Client';
 import Bot from './components/Bot';
 
 
-
-
 function App() {
   const productsRef = useRef(null);
   const contactRef = useRef(null);
