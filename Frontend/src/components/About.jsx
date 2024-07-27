@@ -18,6 +18,7 @@ const About = () => {
     setFlipped(newFlipped);
   };
 
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
