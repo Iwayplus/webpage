@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { Box } from '@mui/material';
 
-
 import Products from './components/Products';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -76,10 +75,13 @@ function App() {
               </div>
               {/* <Career /> */}
               <Get />
+
+   
               {/* <Privacy /> */}
               <Footer />
             </>
           } />
+
           <Route path="/quote" element={<Quote />} /> 
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />

@@ -7,13 +7,16 @@ const contactRoutes = require('./routes/contact');
 const quoteRoutes = require('./routes/quote');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
-// Middleware
-app.use(cors());
+
+app.use(cors({
+  origin: '*', // Allows requests only from this origin
+ 
+}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Define the directory name for static files
 // const __dirname = path.resolve();
 
 // Path to the build directory
@@ -43,8 +46,10 @@ mongoose.connect(mongoURI, {
   .catch(err => console.log(err));
 
 // Routes
-app.use(contactRoutes);
-app.use(quoteRoutes);
+
+
+app.use('/webapi',contactRoutes);
+app.use('/webapi',quoteRoutes);
 
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
