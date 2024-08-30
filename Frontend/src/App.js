@@ -5,9 +5,12 @@ import { Box } from '@mui/material';
 
 import Products from './components/Products';
 import About from './components/About';
+
 import Contact from './components/Contact';
 import Accessiblity from './components/Accessiblity';
 import Footer from './components/Footer';
+
+
 import Faq from './components/Faq';
 import Indoor from './components/Indoor';
 import Work from './components/Work';
@@ -21,8 +24,8 @@ import Testimonial from './components/Testimonial';
 import Privacy from './components/Privacy';
 import Client from './components/Client';
 import Bot from './components/Bot';
-
-
+// import Simple from './components/Simple';
+import Data from './components/Data';
 function App() {
   const productsRef = useRef(null);
   const contactRef = useRef(null);
@@ -75,7 +78,7 @@ function App() {
               </div>
               {/* <Career /> */}
               <Get />
-
+           
    
               {/* <Privacy /> */}
               <Footer />
@@ -86,7 +89,9 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Bot />} />
+          {/* <Route path="/simple" element={<Simple />} /> */}
 
+          <Route path="/data" element={<Data />} />
         </Routes>
       </Box>
     </Router>

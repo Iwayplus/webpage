@@ -96,6 +96,7 @@ const Products = () => {
           Providing Digital Access to Urban Public Spaces - Compact and Scalable Solution
         </div>
       </div>
+
       <div style={bigContainerStyle}>
         <div style={smallContainerStyle('#F8E6D8')}>
         <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
@@ -153,6 +154,7 @@ const Products = () => {
       </div>
     </div>
   );
+  
   
 };
 
