@@ -68,6 +68,14 @@
     margin: 5px 0;
   }
   
+.contact-company{
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+
   /* Contact Message Styling */
   .contact-message {
     font-size: 15px;

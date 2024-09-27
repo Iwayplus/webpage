@@ -1,0 +1,43 @@
+/* Main container using flex */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    background-color: #f5f5f5;
+  }
+  
+  /* Head container */
+  .head-container {
+    display: flex;
+    /* width: 1262px; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* Primary heading styles */
+  .heading-primary {
+    color: var(--Text_Blue, #213757);
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 114.286% */
+  }
+  
+  /* Secondary heading styles */
+  .heading-secondary {
+    color: var(--systemGrey-600, #757575);
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+  }
+  

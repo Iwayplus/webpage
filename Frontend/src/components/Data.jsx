@@ -16,6 +16,8 @@ const Data = () => {
         const data = await response.json();
         setContacts(data);
         setLoading(false);
+
+        
       } catch (error) {
         setError(error.message);
         setLoading(false);
@@ -44,6 +46,8 @@ const Data = () => {
               <span className="contact-email">{contact.email}</span>
             </div>
             <p className="contact-phone">📞 {contact.phone}</p>
+            <p className="contact-company">🏛️ {contact.company}</p>
+
             <p className="contact-message">💬 {contact.message}</p>
           </li>
         ))}

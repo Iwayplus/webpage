@@ -25,6 +25,9 @@ import Privacy from './components/Privacy';
 import Client from './components/Client';
 import Bot from './components/Bot';
 // import Simple from './components/Simple';
+import Specks from './components/Specks';
+
+
 import Data from './components/Data';
 function App() {
   const productsRef = useRef(null);
@@ -92,10 +95,14 @@ function App() {
           {/* <Route path="/simple" element={<Simple />} /> */}
 
           <Route path="/data" element={<Data />} />
+
+          {/* <Route path="/specks" element={<Specks />}/> */}
+
         </Routes>
       </Box>
     </Router>
   );
+  
 }
 
 export default App;
