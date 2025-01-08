@@ -1,175 +1,93 @@
-import React, { useState, useEffect } from 'react';
-import { styled } from '@mui/system';
-import ashoka from "../assets/images/Org-4.png"
+import React, { useState } from 'react';
+import axios from 'axios';
+import './Work.css';
 
-import who from "../assets/images/Org.png"
-import rgci from "../assets/images/Org-1.png"
-import iit from "../assets/images/image 22.png"
-import aiims from "../assets/images/Org-6.png"
-import ipfg from "../assets/images/Org-3.png"
-import research from "../assets/images/Org-2.png"
+const Work = () => {
+  const [heading, setHeading] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    const formData = new FormData();
+    formData.append('heading', heading);
+    formData.append('description', description);
+    formData.append('image', image);
 
-const OrganizationContainer = styled('div')({
-  width: '100%',
-  flexShrink: 0,
-  background: 'rgba(244, 247, 255, 0.60)',
-  display: 'flex',
-  justifyContent: 'space-around',
-  alignItems: 'center',
-  marginTop: '100px',   // 50 tha pehle just for checking purpose
-  '@media (max-width: 768px)': {
-    flexDirection: 'column',
-    marginTop: '200px',
-  },
-});
+    try {
+      const response = await axios.post('http://localhost:5000/api/works', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log(response.data);
+      setSubmitted(true);
+      setIsEditing(false);
+    } catch (error) {
+      console.error('There was an error submitting the work!', error);
+    }
+  };
 
-const Content = styled('div')({
-  color: '#ED455D',
-  fontFamily: 'Plus Jakarta Sans',
-  fontSize: '45px',
-  fontStyle: 'normal',
-  fontWeight: 600,
-  lineHeight: 'normal',
-  letterSpacing: '0.9px',
-  textAlign: 'center',
-  '@media (max-width: 768px)': {
-    fontSize: '35px',
-  },
-});
+  const handleEdit = () => {
+    setIsEditing(true);
+  };
 
-const AdditionalText = styled('div')({
-  width: '451px',
-  color: 'var(--Text_Blue, #213757)',
-  fontFamily: 'Plus Jakarta Sans',
-  fontSize: '25px',
-  fontStyle: 'normal',
-  fontWeight: 500,
-  lineHeight: 'normal',
-  letterSpacing: '0.5px',
-  textAlign: 'center',
-  marginTop: '20px',
-  '@media (max-width: 768px)': {
-    width: '100%',
-    fontSize: '20px',
-  },
-});
+  const handleDelete = () => {
+    setHeading('');
+    setDescription('');
+    setImage(null);
+    setSubmitted(false);
+  };
 
-const CoverageText = styled('div')({
-  color: 'var(--Text_Blue, #213757)',
-  fontFamily: 'Plus Jakarta Sans',
-  fontSize: '20px',
-  fontStyle: 'normal',
-  fontWeight: 500,
-  lineHeight: 'normal',
-  letterSpacing: '0.4px',
-  textAlign: 'center',
-});
-
-const LandmarksText = styled('div')({
-  color: 'var(--Text_Blue, #213757)',
-  fontFamily: 'Plus Jakarta Sans',
-  fontSize: '20px',
-  fontStyle: 'normal',
-  fontWeight: 500,
-  lineHeight: 'normal',
-  letterSpacing: '0.4px',
-  textAlign: 'center',
-});
-
-const BuildingsText = styled('div')({
-  color: 'var(--Text_Blue, #213757)',
-  fontFamily: 'Plus Jakarta Sans',
-  fontSize: '20px',
-  fontStyle: 'normal',
-  fontWeight: 500,
-  lineHeight: 'normal',
-  letterSpacing: '0.4px',
-  textAlign: 'center',
-});
-
-
-const LogoTextContainer = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginTop: '20px',
-  transition: 'opacity 0.5s ease-in-out',
-  opacity: 1,
-  '@media (max-width: 768px)': {
-    flexDirection: 'column',
-  },
-});
-
-const Logo = styled('img')({
-  width: '50px',
-  height: '50px',
-  marginRight: '10px',
-});
-
-const LogoText = styled('div')({
-  color: 'var(--Text_Blue, #213757)',
-  fontFamily: '"Plus Jakarta Sans"',
-  fontSize: '21px',
-  fontStyle: 'normal',
-  fontWeight: '500',
-  lineHeight: '28px', /* 133.333% */
-});
-
-const Organization = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const logosAndTexts = [
-    { logo: who, text: 'WHO-SEARO' },
-    { logo: rgci, text: 'RGCI' },
-    { logo: research, text: 'IITM Research Park' },
-    { logo: ipfg, text: 'INTERNATIONAL PURPLE FEST GOA' },
-    { logo: ashoka, text: 'Ashoka University' },
-    { logo: iit, text: 'IIT Delhi' },
-    { logo: aiims, text: 'AIIMS Delhi, AIIMS Jammu' },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % logosAndTexts.length);
-    }, 1800);
-    return () => clearInterval(interval);
-  }, [logosAndTexts.length]);
   return (
-    <OrganizationContainer>
-      <Content>
-        100,000+
-        <CoverageText>
-        m2 Coverage
-      </CoverageText>
-      </Content>
-  
-      <Content>
-        5,000+
-        <LandmarksText>
-        Indoor Landmarks
-      </LandmarksText>
-      </Content>
-     
-      <Content>
-        8+
-        <BuildingsText>
-        Buildings Mapped
-      </BuildingsText>
-      </Content>
-    
-      <svg xmlns="http://www.w3.org/2000/svg" width="4" height="174" viewBox="0 0 4 174" fill="none">
-        <path d="M2 2L1.99999 172" stroke="#7A9EFF" strokeOpacity="0.6" strokeWidth="3" strokeLinecap="round"/>
-      </svg>
-      <AdditionalText>
-        Trusted by prestigious organisations
-        <LogoTextContainer>
-        <Logo src={logosAndTexts[currentIndex].logo} alt="logo" />
-        <LogoText>{logosAndTexts[currentIndex].text}</LogoText>
-      </LogoTextContainer>
-      </AdditionalText>
-    </OrganizationContainer>
+    <div className="work-container">
+      {!submitted || isEditing ? (
+        <form onSubmit={handleSubmit} className="work-form">
+          <div>
+            <label>
+              Heading:
+              <input
+                type="text"
+                value={heading}
+                onChange={(e) => setHeading(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Description:
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Image:
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => setImage(e.target.files[0])}
+              />
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      ) : (
+        <div className="work-post">
+          <h1>{heading}</h1>
+          <img src={URL.createObjectURL(image)} alt={heading} />
+          <p>{description}</p>
+          <button onClick={handleEdit}>Edit</button>
+          <button onClick={handleDelete} className="delete">Delete</button>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default Organization;
+export default Work;

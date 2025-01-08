@@ -12,6 +12,7 @@ const QuoteList = () => {
       .then(response => {
         setQuotes(response.data);
         setLoading(false);
+        
       })
       .catch(err => {
         setError(err.message);

@@ -1,0 +1,32 @@
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.team-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-panel {
+  transition: all 0.3s ease-in-out;
+}
+
+.info-panel.open {
+  bottom: 0;
+}
+
+.arrow-btn {
+  transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

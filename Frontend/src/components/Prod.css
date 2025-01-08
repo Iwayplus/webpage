@@ -1,0 +1,101 @@
+/* Prod.css */
+
+/* Main container */
+.main-container210 {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: inherit;
+}
+
+/* Headings */
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Content container */
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.left-container,
+.right-container3 {
+  flex: 1;
+}
+
+.left-container svg {
+  width: 100%;
+  height: auto;
+}
+
+.left-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Right container styles */
+.right-container3 {
+  padding: 1rem;
+}
+
+.map-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #E63F31;
+}
+
+.map-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.download-text {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: start;
+  color: #E63F31;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-container,
+  .right-container3 {
+    flex: none;
+    width: 100%;
+  }
+
+  .map-heading {
+    font-size: 1.5rem;
+  }
+
+  .map-text,
+  .details-text,
+  .download-text {
+    font-size: 0.9rem;
+  }
+}

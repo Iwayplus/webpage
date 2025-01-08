@@ -29,6 +29,13 @@ import QuoteList from './components/QuoteList';
 
 
 import Data from './components/Data';
+
+import Prod from './components/Prod';
+import LoginPage from './components/LoginPage';
+import SignupPage from './components/SignupPage';
+import AddEmployee from './components/AddEmployee';
+
+
 function App() {
   const productsRef = useRef(null);
   const contactRef = useRef(null);
@@ -70,18 +77,18 @@ function App() {
          
               <Accessiblity />
               <Faq />
-{/*               
-              <Testimonial/> */}
+           
+              <Testimonial/>
               <div ref={contactRef}>
                 <Contact />
               </div>
 
               <div ref={usecaseRef}>
-                <Usecase />
+                {/* <Usecase /> */}
               </div>
               {/* <Career /> */}
               <Get />
-           
+              <Team/>
    
               {/* <Privacy /> */}
               <Footer />
@@ -97,12 +104,17 @@ function App() {
           <Route path="/data" element={<Data />} />
 
         <Route path="/quotelist" element={<QuoteList />}/>
-
+             <Route path="/prod" element={<Prod/>}/>
+             {/* <Route path="/login" element={<LoginPage/>}/>
+             <Route path="/signup" element={<SignupPage/>}/> */}
+             <Route path= "/emp" element={<AddEmployee/>}/>
+             
         </Routes>
       </Box>
     </Router>
   );
   
 }
+
 
 export default App;

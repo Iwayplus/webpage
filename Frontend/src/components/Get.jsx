@@ -121,6 +121,7 @@ const Get = () => {
         </div>
       </div>
       
+      
         <img src={down} alt="Placeholder" className="image" />
 
     </div>

@@ -22,6 +22,7 @@ const Contact = () => {
         message: ''
     });
 
+    
     const [errors, setErrors] = useState({
         phone: '',
         email: ''
