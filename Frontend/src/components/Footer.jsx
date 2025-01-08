@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import simple from "../assets/images/image 1 (5).png"
 import { height } from "@mui/system";
-import { Cursor } from "mongoose";
 
 
 
