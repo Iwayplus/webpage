@@ -78,7 +78,7 @@ function App() {
               <Accessiblity />
               <Faq />
            
-              <Testimonial/>
+              {/* <Testimonial/> */}
               <div ref={contactRef}>
                 <Contact />
               </div>

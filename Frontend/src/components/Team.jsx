@@ -72,7 +72,7 @@ const TeamCard = ({ image, name, designation, description }) => {
           position: "absolute",
           bottom: "17px",
           width: "90%",
-          height: isOpen ? "50%" : "120px", // Name and designation always visible
+          height: isOpen ? "50%" : "120px",
           transition: "height 0.3s ease",
         }}
       >
@@ -123,8 +123,8 @@ const TeamCard = ({ image, name, designation, description }) => {
                 <path
                   d={
                     isOpen
-                      ? "M17 7L7 17M7 17H17M7 17V7" // Arrow for expanded state
-                      : "M7 17L17 7M17 7H7M17 7V17" // Arrow for collapsed state
+                      ? "M17 7L7 17M7 17H17M7 17V7" 
+                      : "M7 17L17 7M17 7H7M17 7V17" 
                   }
                   stroke="white"
                   strokeWidth="2"
