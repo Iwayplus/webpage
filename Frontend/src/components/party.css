@@ -1,0 +1,224 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.party-container {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 547px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: url(../assets/images/StarBa.png) lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding: 50px 30px; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.party-heading {
+    color: #FFF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.party-description {
+    color: #FFF;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0.36px;
+    margin-bottom: 48px;
+    max-width: 800px;
+}
+
+.party-stats {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    margin-bottom: 78px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-container {
+    text-align: center;
+}
+
+.stat {
+    color: #FFF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.76px;
+}
+
+.stat-subtext {
+    color: #FFF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+
+.party-logos {
+    display: flex;
+    align-items: flex-start;
+    gap: 55px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.party-logo {
+    width: 100px;
+    height: 100px;
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .party-heading {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .party-description {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .stat {
+        font-size: 28px;
+    }
+
+    .stat-subtext {
+        font-size: 14px;
+    }
+
+    .party-logos {
+        gap: 35px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 910px) {
+    .party-heading {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .party-description {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .stat {
+        font-size: 32px;
+    }
+
+    .stat-subtext {
+        font-size: 16px;
+    }
+
+    .party-logos {
+        gap: 45px;
+    }
+}
+
+@media (min-width: 911px) and (max-width: 1200px) {
+    .party-heading {
+        font-size: 52px;
+        line-height: 65px;
+    }
+
+    .party-description {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .stat {
+        font-size: 36px;
+    }
+
+    .stat-subtext {
+        font-size: 18px;
+    }
+
+    .party-logos {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .party-container {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+
+    .party-heading {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .party-description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .stat {
+        font-size: 24px;
+    }
+
+    .stat-subtext {
+        font-size: 12px;
+    }
+
+    .party-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 320px) {
+    .party-heading {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .party-description {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .stat {
+        font-size: 20px;
+    }
+
+    .stat-subtext {
+        font-size: 10px;
+    }
+
+    .party-logo {
+        width: 60px;
+        height: 60px;
+    }
+}

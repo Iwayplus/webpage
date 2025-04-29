@@ -52,7 +52,21 @@ const Navbar = ({ scrollToSection }) => {
     scrollToSection(section);
     setIsMobileMenuOpen(false);
   };
+  
+  const handleProdClick = () => {
+    navigate("/Products");
+  };
 
+  const handleUsecaseClick=() =>{
+   navigate("/UseCase");
+  };
+
+  const handleContactClick=() =>{
+    navigate("/Write-us");
+   };
+       const handleAboutusClick=() =>{
+       navigate ("/About-us");
+       };
   return (
     <nav className="navbar" aria-label="Main Navigation">
       <div className="navbar-logo">
@@ -71,24 +85,24 @@ const Navbar = ({ scrollToSection }) => {
             aria-expanded={openDropdown === 'products'}
             tabIndex="0"
           >
-            <span className="navbar-item">
+            <span className="navbar-item"   onClick={handleProdClick}>
               <span>Products</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none" style={{ marginTop: '5px' }}>
+              {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none" style={{ marginTop: '5px' }}>
                 <path d="M1.25509 0.308217C0.854556 0.708287 0.854556 1.3533 1.25509 1.75337L7.75456 8.83118C8.07335 9.14961 8.58832 9.14961 8.90712 8.83118L15.6998 1.7452C16.1004 1.34513 16.1004 0.700123 15.6998 0.300053C15.2993 -0.100018 14.6536 -0.100018 14.253 0.300053L8.32675 6.51241L2.69374 0.300053C2.30138 -0.0918529 1.64745 -0.091853 1.25509 0.308217Z" fill="#6D7D8B" />
-              </svg>
+              </svg> */}
             </span>
-            {openDropdown === 'products' && (
+            {/* {openDropdown === 'products' && (
               <div className="dropdown">
                 <ul>
-                  <li tabIndex="0" className="dropdown-item">Iwayplus Apps</li>
-                  <li tabIndex="0" className="dropdown-item">Iwayplus Web</li>
-                  <li tabIndex="0" className="dropdown-item">Iwayplus CMS</li>
-                  <li tabIndex="0" className="dropdown-item">Iwayplus Annotations</li>
-                  <li tabIndex="0" className="dropdown-item">Beacons</li>
-                  <li tabIndex="0" className="dropdown-item">Indoor Location</li>
+                  <li tabIndex="0" className="dropdown-item"  onClick={handleProdClick}>Iwayplus Apps</li>
+                  <li tabIndex="0" className="dropdown-item" onClick={handleProdClick}>Iwayplus Web</li>
+                  <li tabIndex="0" className="dropdown-item" onClick={handleProdClick}>Iwayplus CMS</li>
+                  <li tabIndex="0" className="dropdown-item" onClick={handleProdClick}>Iwayplus Annotations</li>
+                  <li tabIndex="0" className="dropdown-item" onClick={handleProdClick}>Beacons</li>
+                  <li tabIndex="0" className="dropdown-item" onClick={handleProdClick}>Indoor Location</li>
                 </ul>
               </div>
-            )}
+            )} */}
           </li>
           <li
             style={{ position: 'relative' }}
@@ -100,13 +114,13 @@ const Navbar = ({ scrollToSection }) => {
             aria-expanded={openDropdown === 'useCase'}
             tabIndex="0"
           >
-            <span className="navbar-item">
+            <span className="navbar-item"  onClick={ handleUsecaseClick}>
               <span>Use Case</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none" style={{ marginTop: '5px' }}>
+              {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none" style={{ marginTop: '5px' }}>
                 <path d="M1.25509 0.308217C0.854556 0.708287 0.854556 1.3533 1.25509 1.75337L7.75456 8.83118C8.07335 9.14961 8.58832 9.14961 8.90712 8.83118L15.6998 1.7452C16.1004 1.34513 16.1004 0.700123 15.6998 0.300053C15.2993 -0.100018 14.6536 -0.100018 14.253 0.300053L8.32675 6.51241L2.69374 0.300053C2.30138 -0.0918529 1.64745 -0.091853 1.25509 0.308217Z" fill="#6D7D8B" />
-              </svg>
+              </svg> */}
             </span>
-            {openDropdown === 'useCase' && (
+            {/* {openDropdown === 'useCase' && (
               <div className="dropdown">
                 <ul>
                   <li tabIndex="0" className="dropdown-item">Healthcare facility and Hospitals</li>
@@ -117,7 +131,7 @@ const Navbar = ({ scrollToSection }) => {
                   <li tabIndex="0" className="dropdown-item">Events</li>
                 </ul>
               </div>
-            )}
+            )} */}
           </li>
           <li
             style={{ position: 'relative' }}
@@ -129,13 +143,13 @@ const Navbar = ({ scrollToSection }) => {
             aria-expanded={openDropdown === 'aboutUs'}
             tabIndex="0"
           >
-            <span className="navbar-item">
+            <span className="navbar-item" onClick={handleAboutusClick}>
               <span>About Us</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none" style={{ marginTop: '5px' }}>
+              {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none" style={{ marginTop: '5px' }}>
                 <path d="M1.25509 0.308217C0.854556 0.708287 0.854556 1.3533 1.25509 1.75337L7.75456 8.83118C8.07335 9.14961 8.58832 9.14961 8.90712 8.83118L15.6998 1.7452C16.1004 1.34513 16.1004 0.700123 15.6998 0.300053C15.2993 -0.100018 14.6536 -0.100018 14.253 0.300053L8.32675 6.51241L2.69374 0.300053C2.30138 -0.0918529 1.64745 -0.091853 1.25509 0.308217Z" fill="#6D7D8B" />
-              </svg>
+              </svg> */}
             </span>
-            {openDropdown === 'aboutUs' && (
+            {/* {openDropdown === 'aboutUs' && (
               <div className="dropdown">
                 <ul>
                   <li tabIndex="0" className="dropdown-item">Our Work</li>
@@ -144,7 +158,7 @@ const Navbar = ({ scrollToSection }) => {
                   <li tabIndex="0" className="dropdown-item">Gallery</li>
                 </ul>
               </div>
-            )}
+            )} */}
           </li>
           <li
             style={{ position: 'relative' }}
@@ -155,7 +169,7 @@ const Navbar = ({ scrollToSection }) => {
             aria-expanded={openDropdown === 'aboutUs'}
             tabIndex="0"
           >
-            <span className="navbar-item">
+            <span className="navbar-item"  onClick={handleContactClick}>
               <span>Contact Us</span>
             </span>
           </li>

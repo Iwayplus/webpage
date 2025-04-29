@@ -26,7 +26,7 @@ import Client from './components/Client';
 import Bot from './components/Bot';
 // import Simple from './components/Simple';
 import QuoteList from './components/QuoteList';
-
+import Member from './components/Member';
 
 import Data from './components/Data';
 
@@ -34,7 +34,11 @@ import Prod from './components/Prod';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import AddEmployee from './components/AddEmployee';
-
+import Party from './components/Party';
+import MyPage from './components/MyPage';
+import Tag from './components/Tag';
+import UseCase from './components/Usecase';
+import Navtool from "./components/Navtool";
 
 function App() {
   const productsRef = useRef(null);
@@ -58,15 +62,19 @@ function App() {
   return (
 
     
+
+
     <Router>
       <Box>
         <Navbar scrollToSection={scrollToSection} />
         <Routes>
           <Route path="/" element={
             <>
+            {/* <Navtool/> */}
               <Indoor />
   
-              <Client />
+              {/* <Client /> */}
+              <Party/>
               <div ref={productsRef}>
                 <Products />
               </div>
@@ -78,22 +86,24 @@ function App() {
               <Accessiblity />
               <Faq />
            
-              {/* <Testimonial/> */}
+              <Testimonial/>
               <div ref={contactRef}>
                 <Contact />
               </div>
-
-              <div ref={usecaseRef}>
-                {/* <Usecase /> */}
-              </div>
+          
+              {/* <div ref={usecaseRef}>
+                <Usecase />
+              </div> */}
               {/* <Career /> */}
               <Get />
-              <Team/>
-   
+          
+             {/* <MyPage/> */}
               {/* <Privacy /> */}
               <Footer />
             </>
           } />
+
+
 
           <Route path="/quote" element={<Quote />} /> 
           <Route path="/blog" element={<Blog />} />
@@ -108,7 +118,12 @@ function App() {
              {/* <Route path="/login" element={<LoginPage/>}/>
              <Route path="/signup" element={<SignupPage/>}/> */}
              <Route path= "/emp" element={<AddEmployee/>}/>
-             
+             <Route path='/Products' element={<Tag/>}/>
+             <Route path='/UseCase' element={<UseCase/>}/>
+            <Route path ='/Write-us' element={<Contact/>}/>
+            <Route path='/About-us' element={<Accessiblity/>}/>
+            <Route path  ='/Members'   element={<Member/>}/>
+            <Route path ='/team' element={<Team/>}/>
         </Routes>
       </Box>
     </Router>

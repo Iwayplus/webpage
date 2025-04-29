@@ -1,0 +1,168 @@
+/* body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.my-page {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.company-title {
+    font-size: 3rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    font-weight: bold;
+    animation: textSlideIn 1.2s ease;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #6b7c93;
+    margin-bottom: 20px;
+}
+
+.content-section, .features-section, .form-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2, .features-section h2, .form-section h2 {
+    font-size: 2rem;
+    color: #333;
+    border-bottom: 3px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content-section p, .form-section p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.features-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features-section li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.features-section li:before {
+    content: '\2713';
+    color: #4a90e2;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    top: 2px;
+    font-weight: bold;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #357ab8;
+    transform: scale(1.05);
+}
+
+.footer-section {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 30px;
+}
+
+footer strong {
+    color: #333;
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/Frontend/src/assets/images/Events.png) no-repeat center;
+    background-size: contain;
+    animation: rotateBg 30s linear infinite;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textSlideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */

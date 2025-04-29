@@ -1,4 +1,20 @@
-
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+    margin-top: 10%; /* Default margin for all screens */
+    box-sizing: border-box;
+  }
+  
+  /* Margin adjustment for big screens */
+  @media (min-width: 1200px) {
+    .section-container {
+      margin-top: 4%; /* Reduced margin for larger screens */
+    }
+  }
 form.emp {
     max-width: 400px;
     margin: 50px auto;

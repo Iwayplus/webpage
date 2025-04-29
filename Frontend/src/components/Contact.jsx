@@ -32,6 +32,18 @@ const Contact = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const styles = {
+           sectioncontainer :{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '100%',
+            padding: '16px',
+            margin: '0 auto',
+            marginTop: '10%', /* Default margin for all screens */
+            boxSizing: 'border-box',
+          },
+          
+          
         contactContainer: {
             display: 'flex',
             flexWrap:"wrap",
@@ -196,6 +208,14 @@ const Contact = () => {
             // boxShadow: '0px 1px 2px 0px rgba(16, 24, 40, 0.05)'
         },
         // Media queries for responsive design
+
+
+        
+          '@media (min-width: 1200px)': {
+            sectionContainer: {
+              marginTop: '5%', 
+            }
+          },
         '@media (max-width: 768px)': {
             contactContainer: {
                 flexDirection: 'column',
@@ -301,6 +321,7 @@ const Contact = () => {
     };
 
     return (
+        <div class="section-container">
         <div style={styles.contactContainer}>
             {isModalOpen && (
                 <>
@@ -315,6 +336,7 @@ const Contact = () => {
             <div style={styles.leftContainer}>
                 <img src={contact} alt="Contact" style={styles.contactImage} />
             </div>
+            
             <div style={styles.rightContainer}>
                 <div style={styles.upperContainer}>
                     <h1 style={styles.heading}>Get in touch with us & Let’s talk!</h1>
@@ -446,6 +468,7 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

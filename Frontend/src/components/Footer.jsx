@@ -15,6 +15,14 @@ const Footer = () => {
   const handleButtonClick = () => {
     navigate("/privacy");
   };
+    
+  const handleProdClick = () => {
+    navigate("/Products");
+  };
+   
+  const handleteamClick = () =>{
+    navigate("/team");
+  };
 
   const handleSubscribe = async () => {
     if (!email) {
@@ -110,6 +118,7 @@ const Footer = () => {
     // textTransform: 'lowercase',
     lineHeight: '24px', /* 150% */
     gap: '10px',
+    cursor:'pointer',
   };
 
   const space = {
@@ -233,13 +242,14 @@ const Footer = () => {
         <div style={com}>
           <span style={{ fontWeight: '600', fontSize: '13px' }}>COMPANY</span>
           <div style={prod}>
-            <span >Products</span>
+            <span  onClick={handleProdClick}>Products</span>
             <span>Blog</span>
-            <span>Our Work</span>
-            <span>Career</span>
-            <span>Team</span>
+            {/* <span>Our Work</span>
+            <span>Career</span> */}
+            <span onClick={handleteamClick}>Team</span>
           </div>
         </div>
+
 
         <div style={com}>
           <span style={{ fontWeight: '600', fontSize: '13px' }}>HELP</span>

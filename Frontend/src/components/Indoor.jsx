@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import hero from "../assets/images/Hero.png";
-
+import map from "../assets/images/Map.png";
 const getStyles = (isHovered, screenSize, isTextVisible) => {
   const isMobile = screenSize <= 768;
   const isTablet = screenSize > 768 && screenSize <= 1024;
@@ -87,6 +87,7 @@ const getStyles = (isHovered, screenSize, isTextVisible) => {
       color: "#ED455D",
     },
     subheading: {
+      marginTop:'2%',
       color: "#213757",
       fontFamily: '"Plus Jakarta Sans", sans-serif',
       fontSize: "20px",
@@ -98,6 +99,7 @@ const getStyles = (isHovered, screenSize, isTextVisible) => {
     subheadingMobile: {
       fontSize: "16px",
     },
+    
     subheadingTablet: {
       fontSize: "18px",
     },
@@ -105,6 +107,7 @@ const getStyles = (isHovered, screenSize, isTextVisible) => {
       width: "165px",
       height: "56px",
       flexShrink: 0,
+      marginTop:'2%',
       borderRadius: "4px",
       background: "#E63F31",
       color: "#FFF",

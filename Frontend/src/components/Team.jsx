@@ -1,180 +1,173 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios"; // Make sure to install axios or use fetch API
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+
+import bala from "../assets/images/sir.png";
+import mishor from "../assets/images/mishor.jpeg";
+import himanshu from "../assets/images/himanshu.jpeg";
+import vikas from "../assets/images/vikas.png";
+import rao from "../assets/images/rao.png";
+import pulkit from "../assets/images/pulkit.png";
+import siva from "../assets/images/siva.png";
+import wilson from "../assets/images/Wilson.png";
+import tanishka from "../assets/images/tanishka.png";
+import vyom from "../assets/images/vyom.png";
+import ujjawal from "../assets/images/Ujjawal.png";
+import udit from "../assets/images/udit.png";
+
+const teamMembers = [
+  { image: bala, name: "M. Balakrishnan", designation: "Mentor, Technical Development" },
+  { image: rao, name: "P.V.M. Rao", designation: "Mentor, Business Development" },
+  { image: vikas, name: "Vikas Upadhyay", designation: "Founder" },
+  { image: pulkit, name: "Pulkit Sapra", designation: "Co-founder" },
+  { image: mishor, name: "Mishor Patra", designation: "Software Developer" },
+  { image: siva, name: "Sivaprakasham", designation: "UI/UX Designer" },
+  { image: himanshu, name: "Himanshu Aggarwal", designation: "Software Developer" },
+  { image: wilson, name: "Wilson Daniel", designation: "Software Developer" },
+  { image: tanishka, name: "Tanishka", designation: "Sr. Administrator" },
+  { image: vyom, name: "Vyom Maheshwari", designation: "Software Developer" },
+  { image: ujjawal, name: "Ujjawal Jha", designation: "Software Developer" },
+  { image: udit, name: "Udit Soni", designation: "Software Developer" },
+];
+
+const containerVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1,
+      duration: 0.6,
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
+
+const TeamCard = ({ image, name, designation }) => (
+  <motion.div
+    variants={cardVariant}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+    style={{
+      width: "280px",
+      height: "369px",
+      background: `url(${image}) lightgray 50% / cover no-repeat`,
+      position: "relative",
+      borderRadius: "10px",
+      overflow: "hidden",
+      boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+      transition: "transform 0.3s ease",
+    }}
+  >
+    <div
+      style={{
+        position: "absolute",
+        bottom: "0",
+        width: "100%",
+        padding: "16px 20px",
+        background: "rgba(255, 255, 255, 0.3)",
+        backdropFilter: "blur(12px)",
+        borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+      }}
+    >
+      <h3
+        style={{
+          color: "#FFF",
+          fontFamily: '"Plus Jakarta Sans"',
+          fontSize: "20px",
+          fontWeight: "600",
+          margin: "0 0 6px 0",
+        }}
+      >
+        {name}
+      </h3>
+      <p
+        style={{
+          color: "#FFF",
+          fontFamily: '"Plus Jakarta Sans"',
+          fontSize: "16px",
+          fontWeight: "500",
+          margin: 0,
+        }}
+      >
+        {designation}
+      </p>
+    </div>
+  </motion.div>
+);
 
 const TeamSection = () => {
-  const [teamMembers, setTeamMembers] = useState([]);
-
   useEffect(() => {
-    // Fetch team members from the API
-    axios
-      .get("https://dev.iwayplus.in/webapi/employees")
-      .then((response) => {
-        setTeamMembers(response.data); // Assuming the API returns an array of team members
-      })
-      .catch((error) => {
-        console.error("Error fetching team members:", error);
-      });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "20px",
-        justifyContent: "center",
-        padding: "20px",
-      }}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariant}
+      style={{ padding: "40px 20px", textAlign: "center" }}
     >
-      {teamMembers.map((member, index) => (
-        <TeamCard
-          key={index}
-          image={member.image} // Assuming 'image' is a URL
-          name={member.name}
-          designation={member.designation}
-          description={member.description}
-        />
-      ))}
-    </div>
-  );
-};
-
-const TeamCard = ({ image, name, designation, description }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const togglePanel = () => {
-    setIsOpen((prevState) => !prevState);
-  };
-
-  return (
-    <div
-      style={{
-        width: "280px",
-        height: "369px",
-        flexShrink: 0,
-        background: `url(${image}) lightgray 50% / cover no-repeat`,
-        position: "relative",
-        borderRadius: "10px",
-        overflow: "hidden",
-      }}
-    >
-      <div
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
         style={{
-          display: "flex",
-          flexDirection: "column",
-          padding: "24px 20px",
-          gap: "16px",
-          alignSelf: "stretch",
-          border: "1px solid rgba(255, 255, 255, 0.5)",
-          background: "rgba(255, 255, 255, 0.3)",
-          backdropFilter: "blur(12px)",
-          borderRadius: "12px",
-          position: "absolute",
-          bottom: "17px",
-          width: "90%",
-          height: isOpen ? "50%" : "120px",
-          transition: "height 0.3s ease",
+          color: "var(--IwayPlus-RED, #E63F31)",
+          fontFamily: "Plus Jakarta Sans",
+          fontSize: "36px",
+          fontWeight: 600,
+          marginTop: "3%",
+          lineHeight: "44px",
+          letterSpacing: "-0.72px",
+          marginBottom: "12px",
         }}
       >
-        {/* Upper Container */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "4px",
-            alignItems: "flex-start",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "100%",
-            }}
-          >
-            <h3
-              style={{
-                color: "var(--White, #FFF)",
-                fontFamily: '"Plus Jakarta Sans"',
-                fontSize: "20px",
-                fontStyle: "normal",
-                fontWeight: "600",
-                lineHeight: "28px",
-              }}
-            >
-              {name}
-            </h3>
-            <button
-              onClick={togglePanel}
-              style={{
-                background: "transparent",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d={
-                    isOpen
-                      ? "M17 7L7 17M7 17H17M7 17V7" 
-                      : "M7 17L17 7M17 7H7M17 7V17" 
-                  }
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <p
-            style={{
-              color: "var(--White, #FFF)",
-              fontFamily: '"Plus Jakarta Sans"',
-              fontSize: "18px",
-              fontStyle: "normal",
-              fontWeight: "600",
-              lineHeight: "28px",
-            }}
-          >
-            {designation}
-          </p>
-          {isOpen && (
-            <p
-              style={{
-                fontSize: "14px",
-                fontWeight: "400",
-                color: "#FFF",
-                fontFamily: "Plus Jakarta Sans",
-              }}
-            >
-              {description}
-            </p>
-          )}
-        </div>
-        {/* Lower Container */}
-        {isOpen && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-            }}
-          >
-            <i style={{ fontSize: "24px", color: "#FFF" }}>⭐</i>
-            <i style={{ fontSize: "24px", color: "#FFF" }}>📞</i>
-            <i style={{ fontSize: "24px", color: "#FFF" }}>📧</i>
-          </div>
-        )}
-      </div>
-    </div>
+        Meet our team
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        style={{
+          color: "var(--Gray-600, #475467)",
+          fontFamily: "Plus Jakarta Sans",
+          fontSize: "20px",
+          fontWeight: 400,
+          lineHeight: "30px",
+          maxWidth: "750px",
+          margin: "0 auto 40px auto",
+        }}
+      >
+        Our philosophy is simple — hire a team of diverse, passionate people and
+        foster a culture that empowers you to do your best work.
+      </motion.p>
+
+      <motion.div
+        variants={containerVariant}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "20px",
+          justifyContent: "center",
+        }}
+      >
+        {teamMembers.map((member, index) => (
+          <TeamCard
+            key={index}
+            image={member.image}
+            name={member.name}
+            designation={member.designation}
+          />
+        ))}
+      </motion.div>
+    </motion.div>
   );
 };
 
