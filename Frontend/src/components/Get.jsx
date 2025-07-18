@@ -120,12 +120,10 @@ const Get = () => {
 </svg>
         </div>
       </div>
-      
-      
         <img src={down} alt="Placeholder" className="image" />
-
     </div>
   );
 };
+
 
 export default Get;

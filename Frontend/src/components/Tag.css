@@ -193,7 +193,6 @@ text-transform: capitalize;
   .low-text{
     color: #E63F31;
 
-/* H2 Medium */
 font-family: "Plus Jakarta Sans";
 font-size: 22px;
 font-style: normal;
@@ -201,6 +200,23 @@ font-weight: 500;
 line-height: normal;
 text-transform: capitalize;
   }
+   .low-text {
+  transition: color 0.3s ease;
+}
+
+.low-text:hover {
+  animation: colorPulse 1s infinite alternate;
+}
+
+@keyframes colorPulse {
+  0% {
+    color: green;
+  }
+  100% {
+    color: red;
+  }
+}
+
   .right-container {
     flex: 1;
     min-width: 300px;

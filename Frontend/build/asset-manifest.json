@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe610b20.css",
-    "main.js": "/static/js/main.cc6cdc6d.js",
+    "main.css": "/static/css/main.953972bb.css",
+    "main.js": "/static/js/main.3eec047c.js",
     "static/js/453.2a332abf.chunk.js": "/static/js/453.2a332abf.chunk.js",
     "static/media/mishor.jpeg": "/static/media/mishor.6bd44420b0e0015c2536.jpeg",
     "static/media/Hero.png": "/static/media/Hero.899d06561d621e03451f.png",
     "static/media/Confirm.gif": "/static/media/Confirm.b34d78a0336757062427.gif",
+    "static/media/Himnew.jpg": "/static/media/Himnew.68428b5e09d645756380.jpg",
     "static/media/StarBa.png": "/static/media/StarBa.ba1a67a8a37b2df52d8b.png",
     "static/media/Down.png": "/static/media/Down.4662548aaf60ccf59b8b.png",
     "static/media/blog.png": "/static/media/blog.e8ee43d0fec53e6af2a0.png",
     "static/media/vikas.png": "/static/media/vikas.b72498b789392c9ce419.png",
     "static/media/Air.png": "/static/media/Air.6170da8cc71aaf018707.png",
     "static/media/IT.png": "/static/media/IT.fd151444beb0fbd91fa2.png",
-    "static/media/himanshu.jpeg": "/static/media/himanshu.4b13276e2f3dc8835612.jpeg",
     "static/media/rao.png": "/static/media/rao.5cc8acd0ad8c0d6941cd.png",
     "static/media/zoo.png": "/static/media/zoo.bdac4884c78673d06f8d.png",
     "static/media/pulkit.png": "/static/media/pulkit.7e09830f68bb84455d2b.png",
@@ -51,12 +51,12 @@
     "static/media/new.png": "/static/media/new.b100c16495334d90d4ec.png",
     "static/media/jio.svg": "/static/media/jio.00f0ae7fe045791139c46970dae4b5e5.svg",
     "index.html": "/index.html",
-    "main.fe610b20.css.map": "/static/css/main.fe610b20.css.map",
-    "main.cc6cdc6d.js.map": "/static/js/main.cc6cdc6d.js.map",
+    "main.953972bb.css.map": "/static/css/main.953972bb.css.map",
+    "main.3eec047c.js.map": "/static/js/main.3eec047c.js.map",
     "453.2a332abf.chunk.js.map": "/static/js/453.2a332abf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe610b20.css",
-    "static/js/main.cc6cdc6d.js"
+    "static/css/main.953972bb.css",
+    "static/js/main.3eec047c.js"
   ]
 }

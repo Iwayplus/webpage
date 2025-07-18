@@ -19,6 +19,7 @@ const Contact = () => {
         phone: '',
         email: '',
         company: '',
+        city: '',
         message: ''
     });
 
@@ -442,12 +443,24 @@ const Contact = () => {
                             <input
                                 type="text"
                                 name="company"
-                                placeholder="Company"
+                                placeholder="Company*"
                                 value={formData.company}
                                 onChange={handleChange}
+                                required
                                 style={styles.input}
                             />
                         </div>
+                           <div style={styles.formRow}>
+                            <input
+                                type="text"
+                                name="city"
+                                placeholder="City*"
+                                value={formData.city}
+                                onChange={handleChange}
+                                required
+                                style={styles.input}
+                            />
+                            </div>
                         <div style={styles.formRow}>
                             <textarea
                                 name="message"
@@ -458,6 +471,7 @@ const Contact = () => {
                                 style={styles.textarea}
                             />
                         </div>
+                        
                         <button
                             type="submit"
                             disabled={isSubmitting}

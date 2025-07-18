@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import bala from "../assets/images/sir.png";
 import mishor from "../assets/images/mishor.jpeg";
-import himanshu from "../assets/images/himanshu.jpeg";
+import himanshu from "../assets/images/Himnew.jpg";
 import vikas from "../assets/images/vikas.png";
 import rao from "../assets/images/rao.png";
 import pulkit from "../assets/images/pulkit.png";
@@ -20,7 +20,7 @@ const teamMembers = [
   { image: vikas, name: "Vikas Upadhyay", designation: "Founder" },
   { image: pulkit, name: "Pulkit Sapra", designation: "Co-founder" },
   { image: mishor, name: "Mishor Patra", designation: "Software Developer" },
-  { image: siva, name: "Sivaprakasham", designation: "UI/UX Designer" },
+  { image: siva, name: "Sivaprakasam", designation: "UI/UX Designer" },
   { image: himanshu, name: "Himanshu Aggarwal", designation: "Software Developer" },
   { image: wilson, name: "Wilson Daniel", designation: "Software Developer" },
   { image: tanishka, name: "Tanishka", designation: "Sr. Administrator" },

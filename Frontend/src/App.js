@@ -22,6 +22,7 @@ import Get from './components/Get';
 import Usecase from './components/Usecase';
 import Testimonial from './components/Testimonial';
 import Privacy from './components/Privacy';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import Client from './components/Client';
 import Bot from './components/Bot';
 // import Simple from './components/Simple';
@@ -108,6 +109,7 @@ function App() {
           <Route path="/quote" element={<Quote />} /> 
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/privacy-app" element={<PrivacyPolicy />} />
           <Route path="/contact" element={<Bot />} />
           {/* <Route path="/simple" element={<Simple />} /> */}
 
@@ -124,6 +126,7 @@ function App() {
             <Route path='/About-us' element={<Accessiblity/>}/>
             <Route path  ='/Members'   element={<Member/>}/>
             <Route path ='/team' element={<Team/>}/>
+            
         </Routes>
       </Box>
     </Router>

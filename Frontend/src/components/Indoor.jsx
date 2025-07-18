@@ -7,6 +7,7 @@ const getStyles = (isHovered, screenSize, isTextVisible) => {
   const isTablet = screenSize > 768 && screenSize <= 1024;
 
   return {
+    
     mainContainer: {
       display: "flex",
       flexWrap: "wrap",
