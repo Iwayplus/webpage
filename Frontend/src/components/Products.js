@@ -1,7 +1,6 @@
 import React from "react";
 import "./Products.css";
 import { useNavigate } from "react-router-dom";
-import { Cursor } from "mongoose";
 const Products = () => {
     const navigate = useNavigate();
   const handleProdClick = () => {

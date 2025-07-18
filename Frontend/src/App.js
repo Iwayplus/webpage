@@ -40,12 +40,15 @@ import MyPage from './components/MyPage';
 import Tag from './components/Tag';
 import UseCase from './components/Usecase';
 import Navtool from "./components/Navtool";
+import UatForm from './components/UatFrom';
+import AppList from './components/AppList';
+import UatReports from './components/UatReports';
 
 function App() {
   const productsRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
- const  usecaseRef = useRef(null);
+  const usecaseRef = useRef(null);
 
   const scrollToSection = (section) => {
     if (section === 'products' && productsRef.current) {
@@ -62,7 +65,7 @@ function App() {
 
   return (
 
-    
+
 
 
     <Router>
@@ -71,34 +74,34 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-            {/* <Navtool/> */}
+              {/* <Navtool/> */}
               <Indoor />
-  
+
               {/* <Client /> */}
-              <Party/>
+              <Party />
               <div ref={productsRef}>
                 <Products />
               </div>
-              
+
               <div ref={aboutRef}>
                 <About />
               </div>
-         
+
               <Accessiblity />
               <Faq />
-           
-              <Testimonial/>
+
+              <Testimonial />
               <div ref={contactRef}>
                 <Contact />
               </div>
-          
+
               {/* <div ref={usecaseRef}>
                 <Usecase />
               </div> */}
               {/* <Career /> */}
               <Get />
-          
-             {/* <MyPage/> */}
+
+              {/* <MyPage/> */}
               {/* <Privacy /> */}
               <Footer />
             </>
@@ -106,7 +109,7 @@ function App() {
 
 
 
-          <Route path="/quote" element={<Quote />} /> 
+          <Route path="/quote" element={<Quote />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/privacy-app" element={<PrivacyPolicy />} />
@@ -115,23 +118,29 @@ function App() {
 
           <Route path="/data" element={<Data />} />
 
-        <Route path="/quotelist" element={<QuoteList />}/>
-             <Route path="/prod" element={<Prod/>}/>
-             {/* <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/quotelist" element={<QuoteList />} />
+          <Route path="/prod" element={<Prod />} />
+          {/* <Route path="/login" element={<LoginPage/>}/>
              <Route path="/signup" element={<SignupPage/>}/> */}
-             <Route path= "/emp" element={<AddEmployee/>}/>
-             <Route path='/Products' element={<Tag/>}/>
-             <Route path='/UseCase' element={<UseCase/>}/>
-            <Route path ='/Write-us' element={<Contact/>}/>
-            <Route path='/About-us' element={<Accessiblity/>}/>
-            <Route path  ='/Members'   element={<Member/>}/>
-            <Route path ='/team' element={<Team/>}/>
-            
+          <Route path="/emp" element={<AddEmployee />} />
+          <Route path='/Products' element={<Tag />} />
+          <Route path='/UseCase' element={<UseCase />} />
+          <Route path='/Write-us' element={<Contact />} />
+          <Route path='/About-us' element={<Accessiblity />} />
+          <Route path='/Members' element={<Member />} />
+          <Route path='/team' element={<Team />} />
+          
+          <Route path='/uat' element={<AppList />}  />
+          <Route path='/uat/:appName' element={<UatForm />}  />
+          <Route path='/uat-report/:appName' element={<UatReports />}  />
+
+          
+
         </Routes>
       </Box>
     </Router>
   );
-  
+
 }
 
 
