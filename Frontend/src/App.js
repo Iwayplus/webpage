@@ -130,10 +130,7 @@ function App() {
           <Route path='/Members' element={<Member />} />
           <Route path='/team' element={<Team />} />
           
-          <Route path='/uat' element={<AppList />}  />
-          <Route path='/uat/:appName' element={<UatForm />}  />
-          <Route path='/uat-report/:appName' element={<UatReports />}  />
-
+          
           
 
         </Routes>

@@ -176,7 +176,7 @@ const Navbar = ({ scrollToSection }) => {
               <span>Contact Us</span>
             </span>
           </li>
-          <li
+          {/* <li
             style={{ position: 'relative' }}
             ref={aboutUsRef}
             onMouseLeave={handleMouseLeave}
@@ -188,7 +188,7 @@ const Navbar = ({ scrollToSection }) => {
             <span className="navbar-item" onClick={handleUatClick}>
               <span>UAT</span>
             </span>
-          </li>
+          </li> */}
           <div className="navbar-contact">
             <a href='https://mail.google.com/mail/?view=cm&fs=1&to=inwayplus@gmail.com'>
               <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
